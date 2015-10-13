@@ -7,14 +7,10 @@
         pkg: "{{item}}"
         state: present
         update_cache: yes
-      with_items: ["perl", "libperl-dev", "monit", "build-essential"]
+      with_items: ["perl", "libperl-dev", "build-essential"]
     - include: 'tasks/main.yml'
     - name: Nginx | Check if nginx is available
       uri: url="http://127.0.0.1" status=200
 
   handlers:
-    - name: restart monit
-      service:
-        name: monit
-        state: restarted
     - include: 'handlers/main.yml'

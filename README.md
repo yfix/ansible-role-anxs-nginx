@@ -1,7 +1,6 @@
-## ANXS - nginx [![Build Status](https://travis-ci.org/ANXS/nginx.svg?branch=master)](https://travis-ci.org/ANXS/nginx)
+## Ansible role ANXS nginx [![Build Status](https://travis-ci.org/yfix/ansible-role-anxs-nginx.svg?branch=master)](https://travis-ci.org/yfix/ansible-role-anxs-nginx)
 
 Ansible role which installs and configures Nginx, from a package or from source (including a series of optional modules).
-
 
 #### Requirements & Dependencies
 
@@ -11,7 +10,6 @@ It has been tested on Ansible 1.5 and above, and depends on the following roles:
   - ANXS.apt
   - ANXS.build-essential
   - ANXS.perl
-  - ANXS.monit (if you want monit protection)
 
 
 ##### Platforms
@@ -145,10 +143,6 @@ nginx_enabled_sites:
 nginx_disabled_sites:
   - webmail.localhost
 ```
-
-##### Monit ?
-You can put Nginx under monit monitoring protection, by setting `monit_protection: yes`
-
 
 ##### Modules
 
