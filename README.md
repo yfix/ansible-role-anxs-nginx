@@ -1,4 +1,4 @@
-## Ansible role ANXS nginx [![Build Status](https://travis-ci.org/yfix/ansible-role-anxs-nginx.svg?branch=master)](https://travis-ci.org/yfix/ansible-role-anxs-nginx)
+## Ansible role nginx, forked from ANXS [![Build Status](https://travis-ci.org/yfix/ansible-role-anxs-nginx.svg?branch=master)](https://travis-ci.org/yfix/ansible-role-anxs-nginx)
 
 Ansible role which installs and configures Nginx, from a package or from source (including a series of optional modules).
 
@@ -7,7 +7,7 @@ Ansible role which installs and configures Nginx, from a package or from source 
 ##### Ansible
 
 It has been tested on Ansible 1.5 and above, and depends on the following roles:
-  - ANXS.apt
+  - yfix.apt
   - ANXS.build-essential
   - ANXS.perl
 
@@ -186,29 +186,3 @@ nginx_disabled_sites:
 
 ###### naxsi module
 - `nginx_naxsi_version` - version of the naxsi module
-
-#### Thanks
-
-To the contributors:
-- [Jean-Denis Vauguet](https://github.com/chikamichi)
-
-
-#### Testing
-This project comes with a VagrantFile, this is a fast and easy way to test changes to the role, fire it up with `vagrant up`. 
-
-See [vagrant docs](https://docs.vagrantup.com/v2/) for getting setup with vagrant
-
-There are two ways to test the install: compiling nginx from source or installing from a package manager.
-By default nginx compiles from source, however if desired, we can set a command line variable to install
-from the package manager
-
-    export NGINX_INSTALL_METHOD=package
-
-#### License
-
-Licensed under the MIT License. See the LICENSE file for details.
-
-
-#### Feedback, bug-reports, requests, ...
-
-Are [welcome](https://github.com/ANXS/nginx/issues)!
